@@ -108,6 +108,43 @@ body {
   background-color: var(--color-rose-50);
   font-size: var(--text-preset-3-size);
   line-height: var(--text-preset-3-line-height);
-  font-weight: var(--text-preset-3);
+  font-weight: var(--text-preset-3-weight);
   font-family: "Red Hat Text", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  gap: 3.2rem;
+  width: 100%;
+  max-width: 1276px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8.8rem;
+  padding-bottom: 8.8rem;
+}
+
+.desserts {
+  width: 100%;
+  width: 70%;
+}
+.your-cart {
+  width: 100%;
+  width: 30%;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .desserts {
+    width: 100%;
+  }
+
+  .your-cart {
+    width: 100%;
+  }
 }
