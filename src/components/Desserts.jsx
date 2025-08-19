@@ -1,7 +1,16 @@
-import React from 'react'
+import Cart from "./cart";
 
-export default function Desserts() {
+function Desserts({ dessert }) {
   return (
-    <div className='desserts'>Desserts</div>
-  )
+    <div className="dessert__container">
+      <h1 className="title">Desserts</h1>
+      <div className="desserts">
+        {dessert.map((dessert) => {
+          return <Cart key={dessert.id} dessert={dessert} />;
+        })}
+      </div>
+    </div>
+  );
 }
+
+export default Desserts;
