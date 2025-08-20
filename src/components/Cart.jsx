@@ -4,23 +4,23 @@ function Cart({ dessert }) {
     <div className="card">
       <picture>
         <source
-          media="(min-width: 996px)"
-          srcSet={`${dessert.image_desktop}`}
+          media={"{min-width:996px}"}
+          srcSet={`${dessert.image.desktop}`}
           sizes="250"
         />
         <source
-          media="(min-width: 768px)"
-          srcSet={`${dessert.image_tablet}`}
-          sizes="213"
+          media={"{min-width:768px}"}
+          srcSet={`${dessert.image.tablet}`}
+          sizes="313"
         />
         <source
-          media="(min-width: 375px)"
-          srcSet={`${dessert.image_mobile}`}
+          media={"{min-width:375px}"}
+          srcSet={`${dessert.image.mobile}`}
           sizes="327"
         />
         <img
           className="card__image"
-          src="{`${dessert.image.thumbnail}`}"
+          src={`${dessert.image.thumbnail}`}
           alt=""
         />
       </picture>

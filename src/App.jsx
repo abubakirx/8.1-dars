@@ -6,7 +6,9 @@ function App() {
   const { data, loading, error } = useFetch(
     "https://json-api.uz/api/project/dessertss/desserts"
   );
-
+  {
+    data && console.log(data);
+  }
   return (
     <div className="container">
       {loading && (
